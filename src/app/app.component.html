@@ -1,0 +1,123 @@
+<hello name="{{ name }}"></hello>
+<div class="col-md-6">
+ 
+    <div class="form-group">
+      <label>CPF.</label>
+      <input type="text" class="form-control" [(ngModel)]="cpf" (blur)="cpfValidation(this.cpf)" [textMask]="{mask: validation.cpf.pattern}">
+      <div class="text-danger" *ngIf="validation.cpf.status === true">
+        {{validation.cpf.msg }}
+      </div>
+    </div>
+
+     <div class="form-group">
+      <label>CNPJ </label>
+      <input type="text" class="form-control" [(ngModel)]="cnpj" (blur)="cnpjValidation(this.cnpj)" [textMask]="{mask: validation.cnpj.pattern}">
+      <div class="text-danger" *ngIf="validation.cnpj.status === true">
+        {{validation.cnpj.msg}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Date </label>
+      <input type="text" class="form-control" [(ngModel)]="date" (blur)="dateValidation(this.date)" [textMask]="{mask: validation.date.pattern}">
+      <div class="text-danger" *ngIf="validation.date.status === true">
+        {{validation.date.msg}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>DDD + Telefone</label>
+      <input type="text" class="form-control" [(ngModel)]="phone" (blur)="phoneValidation(this.phone)" [textMask]="{mask: validation.phone.pattern}">
+      <div class="text-danger" *ngIf="validation.phone.status === true">
+        {{validation.phone.msg}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>DDD + Celular </label>
+      <input type="text" class="form-control" [(ngModel)]="cellphone" (blur)="cellphoneValidation(this.cellphone)" [textMask]="{mask: validation.cellphone.pattern}">
+      <div class="text-danger" *ngIf="validation.cellphone.status === true">
+        {{validation.cellphone.msg}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>DDD </label>
+      <input type="text" class="form-control" [(ngModel)]="ddd" (blur)="dddValidation(this.ddd)" [textMask]="{mask: validation.ddd.pattern}">
+      <div class="text-danger" *ngIf="validation.ddd.status === true">
+        {{validation.ddd.msg}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>CEP </label>
+      <input type="text" class="form-control" [(ngModel)]="cep" (blur)="cepValidation(this.cep)" [textMask]="{mask: validation.cep.pattern}">
+      <div class="text-danger" *ngIf="validation.cep.status === true">
+        {{validation.cep.msg}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>String + Caracteres especiais + Backspace </label>
+      <input type="text" class="form-control" [(ngModel)]="text" [textMask]="{mask: validation.text.pattern, guide:false}">
+    </div>
+
+    <div class="form-group">
+      <label>Numeros + Backspace </label>
+      <input type="text" class="form-control" [(ngModel)]="number" [textMask]="{mask: validation.number.pattern, guide:false}">
+    </div>
+
+
+    <div class="form-group">
+      <label>Apenas string</label>
+      <input type="text" class="form-control" [(ngModel)]="textOnly" [textMask]="{mask: validation.textOnly.pattern, guide:false}">
+    </div>
+
+    <div class="form-group">
+      <label>Apenas Numeros</label>
+      <input type="text" class="form-control" [(ngModel)]="numberOnly"[textMask]="{mask: validation.numberOnly.pattern, guide:false}">
+    </div>
+
+    <div class="form-group">
+      <label>CNAE</label>
+      <input type="text" class="form-control" [(ngModel)]="cnae" (blur)="cnaeValidation(this.cnae)" [textMask]="{mask: validation.cnae.pattern}">
+      <div class="text-danger" *ngIf="validation.cnae.status === true">
+        {{validation.cnae.msg }}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>UF</label>
+      <input type="text" class="form-control" [(ngModel)]="uf" (blur)="ufValidation(this.uf)" [textMask]="{mask: validation.uf.pattern}">
+      <div class="text-danger" *ngIf="validation.uf.status === true">
+        {{validation.uf.msg }}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Banco</label>
+      <input type="text" class="form-control" [(ngModel)]="bank" (blur)="bankValidation(this.bank)" [textMask]="{mask: validation.bank.pattern}">
+      <div class="text-danger" *ngIf="validation.bank.status === true">
+        {{validation.bank.msg }}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Agência</label>
+      <input type="text" class="form-control" [(ngModel)]="agency" (blur)="agencyValidation(this.agency)" [textMask]="{mask: validation.agency.pattern}">
+      <div class="text-danger" *ngIf="validation.agency.status === true">
+        {{ validation.agency.msg }}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Conta Corrente</label>
+      <input type="text" class="form-control" [(ngModel)]="currentAccount" (blur)="currentAccountValidation(this.currentAccount)" [textMask]="{mask: validation.currentAccount.pattern}">
+      <div class="text-danger" *ngIf="validation.currentAccount.status === true">
+        {{ validation.currentAccount.msg }}
+      </div>
+    </div>
+
+
+
+</div>
